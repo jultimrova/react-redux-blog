@@ -3,6 +3,7 @@ import axios from 'axios'
 export const FETCH_POSTS = 'FETCH_POSTS'
 export const CREATE_POSTS = 'CREATE_POSTS'
 export const FETCH_POST = 'FETCH_POST'
+export const DELETE_POST = 'DELETE_POST'
 
 const BASE_URL = 'https://bloggy-api.herokuapp.com'
 
@@ -32,4 +33,14 @@ export function fetchPost(id) {
         type: FETCH_POST,
         payload: request
     }
+}
+
+export function deletePost (id, callback) {
+    const request = axios.delete(`${BASE_URL}/posts/${id}`)
+        .then(() => callback());
+
+    return {
+        type: DELETE_POST,
+        payload: id
+    };
 }

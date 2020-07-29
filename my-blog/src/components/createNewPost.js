@@ -6,6 +6,12 @@ import {Link} from "react-router-dom";
 
 class CreateNewPost extends Component {
 
+    onSubmit(values) {
+        this.props.createPost(values, () => {
+            this.props.history.push('/')
+        });
+    }
+
     renderField(field) {
         const { meta: { touched, error } } = field;
         const className = `form-group ${touched && error ? 'has-danger' : ''}`;
@@ -22,12 +28,6 @@ class CreateNewPost extends Component {
                 </div>
             </div>
         )
-    }
-
-    onSubmit(values) {
-        this.props.createPost(values, () => {
-            this.props.history.push('/')
-        });
     }
 
     render() {

@@ -13,7 +13,9 @@ class PostsId extends Component {
         return _.map(this.props.posts, p => {
             return (
                 <li className='list-group-item' key={p.id}>
-                    {p.title}
+                    <Link to={`/posts/${p.id}`}>
+                        {p.title}
+                    </Link>
                 </li>
             )
         })
