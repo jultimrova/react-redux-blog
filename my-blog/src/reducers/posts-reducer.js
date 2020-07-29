@@ -1,5 +1,5 @@
 import _ from 'lodash'
-import {DELETE_POST, FETCH_POST, FETCH_POSTS} from '../actions'
+import {DELETE_POST, FETCH_POST, FETCH_POSTS} from "../actions";
 
 export default function (state = {}, action) {
     switch (action.type) {
@@ -16,3 +16,6 @@ export default function (state = {}, action) {
             return state
     }
 }
+
+
+

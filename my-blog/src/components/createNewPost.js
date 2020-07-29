@@ -45,12 +45,7 @@ class CreateNewPost extends Component {
                     label="Body"
                     component={this.renderField}
                 />
-                <Field
-                    name="comment"
-                    label="Comment"
-                    component={this.renderField}
-                />
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <button type="submit" className="btn btn-primary">Save</button>
                 <Link to="/" className="btn btn-danger">Cancel</Link>
             </form>
         )
@@ -65,9 +60,6 @@ function validate(values) {
     }
     if (!values.body) {
         errors.body = "Enter some content";
-    }
-    if (!values.comment) {
-        errors.comment = "Enter some comment please";
     }
 
     return errors;

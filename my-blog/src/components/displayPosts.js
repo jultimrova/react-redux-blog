@@ -32,7 +32,6 @@ class DisplayPosts extends Component {
                 </button>
                 <h3>{post.title}</h3>
                 <h5>{post.body}</h5>
-                <p>{post.comment}</p>
             </div>
         );
     }
