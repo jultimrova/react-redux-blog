@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const FETCH_POSTS = 'FETCH_POSTS'
+export const FETCH_POSTS = 'FETCH_POSTS'
 
 const BASE_URL = 'https://bloggy-api.herokuapp.com'
 
