@@ -5,7 +5,9 @@ react redux blog
 clone this repo, install dependencies, go to the right folder, then write npm start
 
 ...
-> git clone 
+>git clone https://github.com/jultimrova/unshiftTask.git
+
+>npm install
 
 >cd my-blog
 
