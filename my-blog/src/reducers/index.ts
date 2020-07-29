@@ -6,5 +6,6 @@ const rootReducer = combineReducers({
     posts: PostsReducer,
     form: formReducer
 })
+export type RootState = ReturnType<typeof rootReducer>
 
 export default rootReducer

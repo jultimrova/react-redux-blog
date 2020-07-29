@@ -16,7 +16,7 @@ export function fetchPosts () {
     }
 }
 
-export function fetchPost (id) {
+export function fetchPost (id: number) {
     const request = axios.get(`${BASE_URL}/posts/${id}`)
 
     return {
@@ -25,7 +25,7 @@ export function fetchPost (id) {
     }
 }
 
-export function createPost (values, callback) {
+export function createPost (values: string, callback: any) {
     const request = axios.post(`${BASE_URL}/posts`, values)
         .then(() => callback())
 
@@ -35,7 +35,7 @@ export function createPost (values, callback) {
     }
 }
 
-export function deletePost (id, callback) {
+export function deletePost (id: number, callback: any) {
     const request = axios.delete(`${BASE_URL}/posts/${id}`)
         .then(() => callback())
 

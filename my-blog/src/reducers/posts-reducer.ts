@@ -1,7 +1,7 @@
 import _ from 'lodash'
 import {DELETE_POST, FETCH_POST, FETCH_POSTS} from "../actions";
 
-export default function (state = {}, action) {
+export default function (state = {}, action: any) {
     switch (action.type) {
         case FETCH_POSTS:
             return _.mapKeys(action.payload.data, 'id');
