@@ -1,10 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './index.css';import React from 'react';
 import * as serviceWorker from './serviceWorker';
+import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
+
+import App from './App';
 import reducers from './reducers'
 
 ReactDOM.render(
